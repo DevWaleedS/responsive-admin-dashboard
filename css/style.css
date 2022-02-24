@@ -1,0 +1,500 @@
+/* Start Global Rules */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap');
+:root {
+    --bg-color: #003147;
+    --hover-color: #03a9f4;
+    --main-section-bg: #f5f5f5;
+    --para-color: #999;
+    --transition: 0.5s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* End Global Rules */
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Start Nivation Section */
+
+.naviation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.naviation.active {
+    width: 60px;
+}
+
+.naviation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.naviation ul li {
+    position: relative;
+    width: 100%;
+}
+
+.naviation ul li:not(:first-child):hover {
+    background-color: var(--hover-color);
+}
+
+.naviation ul li:first-child {
+    margin-bottom: 20px;
+}
+
+.naviation ul li a {
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.naviation ul li a .icon {
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.naviation ul li a i,
+.fas {
+    color: #fff;
+    font-size: 24px;
+}
+
+.naviation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+
+/* End Navigation Section */
+
+
+/* Start Main Section */
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--main-section-bg);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main.active {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.main .topbar {
+    width: 100%;
+    background-color: #fff;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.main .toggle::before {
+    content: "\f0c9";
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    color: #111;
+}
+
+.main .search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.main .search label {
+    position: relative;
+    width: 100%;
+}
+
+.main .search label input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    caret-color: rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.main .search label i {
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+
+.main .user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main .user img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+
+/* Start card-box */
+
+.card-box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.card-box .card {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card-box .card .numbers {
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.card-box .card .card-name {
+    color: var(--para-color);
+}
+
+.card-box .card .icon-box i {
+    font-size: 2.5em;
+    color: var(--hover-color);
+}
+
+
+/* End Card-box */
+
+
+/* Strat details */
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+.details .recent-orders {
+    position: relative;
+    min-height: 530px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.details .recent-orders .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.details .recent-orders .card-header h2 {
+    font-weight: 600;
+}
+
+.details .recent-orders .card-header .btn {
+    position: relative;
+    padding: 5px 10px;
+    background-color: var(--hover-color);
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600;
+}
+
+.details table tbody tr:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details table tbody tr:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.details table tbody tr td {
+    padding: 9px 5px;
+}
+
+.details table tbody tr td:last-child,
+.details table thead tr td:last-child {
+    text-align: right;
+}
+
+.details .recent-orders table thead tr td:nth-child(2),
+.details .recent-orders table tbody tr td:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.details .recent-orders table thead tr td:nth-child(3),
+.details .recent-orders table tbody tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status {
+    background-color: red;
+    color: #fff;
+    font-weight: 300;
+    padding: 2px 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.pending {
+    background-color: #f9ca3f;
+}
+
+.return {
+    background-color: #f00;
+}
+
+.inprogress {
+    background-color: #1795ce;
+}
+
+.delivered {
+    background-color: #8de02c;
+}
+
+.details .recent-customers {
+    position: relative;
+    min-height: 530px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.details .recent-customers .card-header {
+    margin-bottom: 30px;
+}
+
+.details .recent-customers .img-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.details .recent-customers .img-box img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details .recent-customers table tr td h4 span {
+    font-size: 14px;
+    color: var(--para-color);
+}
+
+.details .recent-customers table tr:hover,
+.details .recent-customers table tr:hover td h4 span {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.details .recent-customers table tr td {
+    padding: 7px 10px;
+}
+
+.details .recent-customers table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+
+/* End details */
+
+
+/* End Main Section */
+
+
+/* Strat Responsive */
+
+@media (max-width:992px) {
+    .naviation {
+        left: -300px;
+    }
+    .naviation.active {
+        left: 0;
+        width: 300px;
+    }
+    .main {
+        width: 100%;
+        left: 0;
+    }
+    .main.active {
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .card-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:480px) {
+    .card-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .details .recent-orders {
+        overflow-x: auto;
+    }
+    .details .recent-orders table {
+        width: 600px;
+    }
+    .naviation {
+        left: -100%;
+        width: 100%;
+        z-index: 1000;
+    }
+    .naviation.active {
+        left: 0;
+        width: 100%;
+    }
+    .main .toggle.active {
+        z-index: 10000;
+        right: 0px;
+        position: fixed;
+        left: initial;
+    }
+    .main .toggle.active::before {
+        color: #fff;
+    }
+    .main {
+        left: 0;
+        width: 100%;
+    }
+    .main.active {
+        left: 0;
+        width: 100%;
+    }
+    .main .search {
+        position: relative;
+        width: auto;
+        margin: 0 10px;
+    }
+}
